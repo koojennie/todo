@@ -3,7 +3,13 @@ const listContainer = document.getElementById("list-container");
 
 function addTask() {
     if(inputBox.value === '') {
-        alert("You must write something!");
+        Swal.fire({
+            title: 'Oops...',
+            text: 'You must write something!',
+            icon: 'warning',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#7950F2',
+        });
     }
     else {
         let li = document.createElement("li");
@@ -16,6 +22,7 @@ function addTask() {
     inputBox.value = "";
     saveData();
 }
+
 
 listContainer.addEventListener("click", function(e) {
     if(e.target.tagName === "LI"){
