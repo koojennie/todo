@@ -69,7 +69,9 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    transition: all 0.3s ease; 
 }
+
 ul li::before {
     content: '';
     position: absolute;
@@ -81,6 +83,12 @@ ul li::before {
     background-position: center;
     top: 12px;
     left: 8px;
+    transition: background-image 0.3s ease;
+}
+
+ul li.removing {
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 ul li.checked {
@@ -107,4 +115,28 @@ ul li span {
 
 ul li span:hover {
     background: #edeef0;
+}
+
+@media only screen and (max-width: 600px) {
+    .todo-app {
+        margin: 20px auto;
+        padding: 20px 15px 35px;
+    }
+
+    button {
+        padding: 12px 30px; 
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 15px;
+        padding: 10px 8px 10px 40px;
+    }
+
+    ul li::before {
+        height: 24px;
+        width: 24px;
+        top: 10px;
+        left: 5px;
+    }
 }
