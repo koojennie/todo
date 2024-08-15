@@ -147,22 +147,36 @@ ul li span:hover {
 
 /* Additional media query for small screens (e.g., Galaxy A05) */
 @media only screen and (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+
     .todo-app {
-        padding: 15px 10px 25px;
+        padding: 15px 15px 20px;
         margin: 10px auto;
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .row {
+        flex-wrap: wrap; /* Allow wrapping for small screens */
+    }
+
+    input {
+        flex: 1;
+        padding: 8px;
+        font-size: 12px;
     }
 
     button {
         padding: 10px 20px;
-        font-size: 12px;
+        font-size: 12px; 
     }
 
     ul li {
-        font-size: 14px;
+        font-size: 13px;
         padding: 8px 6px 8px 30px;
     }
 
